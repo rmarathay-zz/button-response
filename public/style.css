@@ -1,0 +1,87 @@
+html,body{background-color:#FFFFFF}
+
+.container {
+  width: 200px;
+  height: 100%;
+  margin: 0 auto 0;
+}
+
+.pulse-button {
+    border-width: 8px 8px 0;
+    position: relative;
+    height: 50px;
+    box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+    background-size:cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    outline: none;
+    border-radius: 20px;
+    background-color: #13345c;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    transition: all 3.5s;
+    margin: 5px;
+    padding: 10px;
+    width: 160px;
+
+  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+.pulse-button:hover 
+{
+  -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+}
+
+
+.bar-button {
+  border-radius: 30px;
+  background-color: #13345c;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 160px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  outline: none;
+}
+
+.bar-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.bar-button span:after {
+  content: '>>';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.bar-button:hover span {
+  padding-right: 45px;
+}
+
+.bar-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
